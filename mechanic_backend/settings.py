@@ -129,8 +129,8 @@ CORS_ORIGIN_WHITELIST = [
 
     "http://localhost:3000",
     "http://localhost:3001",
-    "https://meetmech.herokuapp.com",
-    "http://meetmech.herokuapp.com"
+    "https://police-database-api.herokuapp.com",
+    "http://police-database-api.herokuapp.com"
 
 ]
 
