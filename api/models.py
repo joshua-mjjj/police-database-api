@@ -20,11 +20,15 @@ STATUS = (
     ('absent', 'Absent'),
     ('dead', 'Dead'),
     ('transferred', 'Transferred'),
+    ('suspended', 'Suspended'),
+    ('dismissed', 'Dismissed'),
 )
 
 LEAVE = (
     ('pass_leave', 'Pass leave'),
     ('annual_leave', 'Annual leave'),
+    ('maternity_leave', 'Marternity leave'),
+    ('not_on_leave', 'Not on leave'),
 )
 
 
