@@ -31,6 +31,23 @@ LEAVE = (
     ('not_on_leave', 'Not on leave'),
 )
 
+DEPARTMENTS = (
+    ('un_agencies', 'UN AGENCIES'),
+    ('embassy_high', 'EMBASSY HIGH'),
+    ('jlot', 'JLOT'),
+    ('body_gaurd', 'BODY GUARD'),
+    ('authorities', 'AUTHORITIES'),
+    ('ministries', 'MINISTRIES'),
+)
+
+TITLES = (
+    ('commander', 'Commander'),
+    ('deputy_commander', 'Deputy Commander'),
+    ('staff_officer', 'Staff Officer'),
+    ('armoury', 'Armoury'),
+    ('head_operations', 'Head Operations'),
+)
+
 
 
 
@@ -73,8 +90,8 @@ class Employee(models.Model):
 	date_of_posting       = models.DateField(blank=True, null=True)
 	computer_number       = models.CharField(max_length=100, unique=True, blank=True, null=True)
 	rank                  = models.CharField(max_length=100, blank=True, null=True)
-	title                 = models.CharField(max_length=100, blank=True, null=True)
-	department            = models.CharField(max_length=100, blank=True, null=True)
+	title                 = models.CharField(max_length=100, choices=TITLES, blank=True, null=True)
+	department            = models.CharField(max_length=100, choices=DEPARTMENTS, blank=True, null=True)
 	status                = models.CharField(max_length=100, choices=STATUS, blank=True, null=True)
 	on_leave              = models.CharField(max_length=100, choices=LEAVE, blank=True, null=True)
 	date_of_establishment = models.DateField(max_length=100, blank=True, null=True)
